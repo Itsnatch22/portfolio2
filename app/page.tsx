@@ -1,4 +1,3 @@
-"use client"
 import Philosophy from "@/components/About";
 import HeroSection from "@/components/HeroSection";
 import Work from "@/components/Work";

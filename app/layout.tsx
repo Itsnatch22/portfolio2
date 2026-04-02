@@ -1,10 +1,12 @@
+"use client"
+import React, { useState } from "react";
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css"
 
-//imports from the component folder
 import CursorFollower from "@/components/Cursor";
 import ScrollManager from "@/components/ScrollManager";
+import Preloader from "@/components/Preloader";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -17,21 +19,19 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Mark's Portfolio",
-  description: "A portfolio website to showcase my skills and projects.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [loading, setLoading] = useState(true);
+
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased`}
+        className={`${playfair.variable} ${inter.variable} antialiased bg-[#050505]`}
       >
+        {loading && <Preloader onComplete={() => setLoading(false)} />}
         <CursorFollower />
         <ScrollManager />
         {children}

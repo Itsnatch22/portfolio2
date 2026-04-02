@@ -1,7 +1,8 @@
 "use client";
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -9,60 +10,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const philosophyText = "I bridge the gap between creative design and technical execution. My approach is rooted in narrative, focusing on motion, interaction, and the subtle details that turn a website into an experience.";
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-        // Text Reveal
-        const text = textRef.current;
-        if (text) {
-            const words = text.innerText.split(' ');
-            text.innerHTML = words.map(word => `<span class="opacity-20 inline-block mr-3 mb-2 transition-opacity duration-300">${word}</span>`).join('');
-            
-            const spans = text.querySelectorAll('span');
-            
-            gsap.to(spans, {
-              scrollTrigger: {
-                trigger: text,
-                start: "top 80%",
-                end: "bottom 60%",
-                scrub: 1,
-              },
-              opacity: 1,
-              stagger: 0.05,
-              ease: "none",
-            });
+  useGSAP(() => {
+    // Text Reveal
+    gsap.to(".reveal-word", {
+      scrollTrigger: {
+        trigger: ".reveal-container",
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: 1,
+      },
+      opacity: 1,
+      stagger: 0.05,
+      ease: "none",
+    });
+
+    // Grid Items Reveal
+    gsap.fromTo(".about-grid-item", 
+        { y: 100, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".about-grid-item",
+                start: "top 85%",
+            },
+            stagger: 0.1
         }
+    );
 
-        // Grid Items Reveal
-        itemsRef.current.forEach((item, index) => {
-            if (!item) return;
-            gsap.fromTo(item, 
-                { y: 100, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 85%",
-                    },
-                    delay: index * 0.1
-                }
-            );
-        });
-
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
-
-  const addToItems = (el: HTMLDivElement | null) => {
-    if (el && !itemsRef.current.includes(el)) {
-        itemsRef.current.push(el);
-    }
-  };
+  }, { scope: containerRef });
 
   return (
     <section id="about" ref={containerRef} className="relative w-full py-16 sm:py-24 lg:py-32 bg-[#050505] text-[#f2f2f2] overflow-hidden">
@@ -79,11 +59,13 @@ export default function About() {
         </div>
 
         {/* Main Statement */}
-        <div className="mb-24 sm:mb-32 lg:mb-40">
-            <p ref={textRef} className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-playfair leading-[1.1] max-w-5xl">
-                I bridge the gap between creative design and technical execution. 
-                My approach is rooted in narrative, focusing on motion, interaction, 
-                and the subtle details that turn a website into an experience.
+        <div className="mb-24 sm:mb-32 lg:mb-40 reveal-container">
+            <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-playfair leading-[1.1] max-w-5xl">
+                {philosophyText.split(' ').map((word, i) => (
+                  <span key={i} className="reveal-word opacity-20 inline-block mr-3 mb-2 transition-opacity duration-300">
+                    {word}
+                  </span>
+                ))}
             </p>
         </div>
 
@@ -91,7 +73,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
             
             {/* Column 1 */}
-            <div ref={addToItems} className="md:col-span-5 md:col-start-1 space-y-2">
+            <div className="about-grid-item md:col-span-5 md:col-start-1 space-y-2">
                  <span className="text-xs uppercase tracking-widest text-accent/50 block mb-3 sm:mb-4">The Toolset</span>
                  <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair mb-4 sm:mb-6">Built for Performance</h3>
                  <p className="text-white/60 font-inter leading-relaxed max-w-md text-sm sm:text-base">
@@ -108,7 +90,7 @@ export default function About() {
             </div>
 
             {/* Column 2 (Offset) */}
-            <div ref={addToItems} className="md:col-span-5 md:col-start-7 pt-0 md:pt-20 lg:pt-32 space-y-2">
+            <div className="about-grid-item md:col-span-5 md:col-start-7 pt-0 md:pt-20 lg:pt-32 space-y-2">
                  <span className="text-xs uppercase tracking-widest text-accent/50 block mb-3 sm:mb-4">The Vibe</span>
                  <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair mb-4 sm:mb-6">Designed for Humans</h3>
                  <p className="text-white/60 font-inter leading-relaxed max-w-md text-sm sm:text-base">
@@ -117,7 +99,7 @@ export default function About() {
                  </p>
                  <div className="mt-6 sm:mt-8">
                     <Link href="#contact" className="group inline-flex items-center gap-2 text-white border-b border-white/30 pb-1 hover:border-white transition-colors touch-manipulation">
-                        <span className="uppercase text-xs sm:text-sm tracking-widest">Let's Collaborate</span>
+                        <span className="uppercase text-xs sm:text-sm tracking-widest">Let&apos;s Collaborate</span>
                         <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                     </Link>
                  </div>

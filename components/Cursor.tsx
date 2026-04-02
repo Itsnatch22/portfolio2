@@ -5,7 +5,6 @@ import { motion, useSpring } from 'framer-motion';
 export default function CursorFollower() {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const rafId = useRef<number | null>(null);
   const lastUpdateTime = useRef<number>(0);
   const throttleDelay = 16; // ~60fps
 
@@ -47,9 +46,6 @@ export default function CursorFollower() {
       window.removeEventListener('mousemove', handleElementHover);
       document.removeEventListener('mouseenter', handleMouseEnter);
       document.removeEventListener('mouseleave', handleMouseLeave);
-      if (rafId.current) {
-        cancelAnimationFrame(rafId.current);
-      }
     };
   }, [throttledMouseMove, handleElementHover, handleMouseEnter, handleMouseLeave]);
 

@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+const SKELETON_WIDTHS = ["96%", "82%", "74%", "88%"];
+
 export function TextSkeleton({ lines = 3, className = "" }: { lines?: number; className?: string }) {
   return (
     <div className={`space-y-2 ${className}`}>
@@ -9,7 +11,7 @@ export function TextSkeleton({ lines = 3, className = "" }: { lines?: number; cl
         <div
           key={i}
           className="h-4 bg-white/10 rounded animate-pulse"
-          style={{ width: `${Math.random() * 40 + 60}%` }}
+          style={{ width: SKELETON_WIDTHS[i % SKELETON_WIDTHS.length] }}
         />
       ))}
     </div>
@@ -30,7 +32,7 @@ export function HeroSkeleton() {
 
 export function ProjectSkeleton() {
   return (
-    <div className="w-full h-full flex-shrink-0 flex flex-col md:flex-row p-6 md:p-24 box-box border-r border-white/5 bg-[#050505]">
+    <div className="w-full h-full flex-shrink-0 flex flex-col md:flex-row p-6 md:p-24 box-border border-r border-white/5 bg-[#050505]">
       <div className="w-full md:w-1/2 space-y-8">
         <div className="h-16 w-16 bg-white/10 rounded animate-pulse" />
         <div className="space-y-4">
