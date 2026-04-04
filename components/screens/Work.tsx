@@ -63,7 +63,7 @@ export default function Work() {
         {/* Horizontal Scroll Container */}
         <div ref={horizontalRef} className="min-h-screen md:h-screen w-full flex md:overflow-x-hidden overflow-y-auto md:overflow-y-hidden">
             {PROJECTS.map((project) => (
-                <div key={project.id} className="project-panel w-full md:w-full h-auto md:h-full flex-shrink-0 flex flex-col md:flex-row p-4 sm:p-6 md:p-24 box-border border-r border-white/5 bg-[#050505] mb-8 md:mb-0">
+                <div key={project.id} className="project-panel w-full md:w-full h-auto md:h-full shrink-0 flex flex-col md:flex-row p-4 sm:p-6 md:p-24 box-border border-r border-white/5 bg-[#050505] mb-8 md:mb-0">
                     
                     {/* Content Side */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 md:space-y-8 pr-0 md:pr-12 md:max-w-xl">
@@ -101,8 +101,8 @@ export default function Work() {
                     </div>
 
                     {/* Image/Visual Side */}
-                    <div className="group w-full md:w-1/2 mt-8 md:mt-0 relative rounded-2xl md:rounded-3xl overflow-hidden min-h-[300px]">
-                        <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-40`} />
+                    <div className="group w-full md:w-1/2 mt-8 md:mt-0 relative rounded-2xl md:rounded-3xl overflow-hidden min-h-75">
+                        <div className={`absolute inset-0 bg-linear-to-br ${project.color} opacity-40`} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             {imageErrors.has(project.id) ? (
                                 <div className="flex items-center justify-center h-full">

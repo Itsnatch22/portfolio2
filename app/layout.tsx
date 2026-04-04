@@ -6,7 +6,6 @@ import "./globals.css"
 
 import CursorFollower from "@/components/ui/Cursor";
 import ScrollManager from "@/components/ui/ScrollManager";
-import Preloader from "@/components/ui/Preloader";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased bg-[#050505]`}
       >
-        {loading && <Preloader onComplete={() => setLoading(false)} />}
         <CursorFollower />
         <ScrollManager />
         {children}

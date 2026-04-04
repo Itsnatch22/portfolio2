@@ -61,9 +61,9 @@ export default function Contact() {
         className="relative min-h-[80vh] w-full bg-[#050505] text-[#f2f2f2] flex flex-col justify-between px-6 md:px-24 pt-32 pb-12 overflow-hidden"
       >
         {/* Background Subtle Gradient */}
-         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] pointer-events-none" />
+         <div className="absolute bottom-0 right-0 w-125 h-125 bg-white/5 rounded-full blur-[150px] pointer-events-none" />
 
-        <div className="flex-grow flex flex-col justify-center max-w-[1400px] mx-auto w-full">
+        <div className="grow flex flex-col justify-center max-w-350 mx-auto w-full">
           <div className="mb-8">
               <h2 className="text-sm font-inter tracking-[0.2em] uppercase text-white/40 mb-4">
                   (003) Get in Touch
@@ -104,7 +104,7 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <footer className="w-full max-w-[1400px] mx-auto pt-24 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] text-white/30 font-inter">
+        <footer className="w-full max-w-350 mx-auto pt-24 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] text-white/30 font-inter">
           <div>
              &copy; {new Date().getFullYear()} Mark. All rights reserved.
           </div>
@@ -114,7 +114,7 @@ export default function Contact() {
               <Link href="/privacy" className="hover:text-white transition-colors text-[8px]">Privacy Policy</Link>
           </div>
           <div>
-              Designed & Built with &hearts;
+              Built with ❤️
           </div>
         </footer>
       </section>

@@ -34,13 +34,13 @@ export default function Loading() {
   return (
     <div 
       ref={containerRef}
-      className="fixed inset-0 z-[100] bg-[#050505] flex flex-col items-center justify-center gap-6"
+      className="fixed inset-0 z-100 bg-[#050505] flex flex-col items-center justify-center gap-6"
     >
       <div className="flex flex-col items-center">
         <span className="text-xl font-playfair italic text-white/20 mb-4 uppercase tracking-[0.5em]">
           MARK.
         </span>
-        <div className="w-48 h-[1px] bg-white/10 relative overflow-hidden">
+        <div className="w-48 h-px bg-white/10 relative overflow-hidden">
           <div 
             ref={progressRef}
             className="absolute top-0 left-0 h-full bg-white w-0"

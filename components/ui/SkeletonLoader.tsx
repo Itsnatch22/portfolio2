@@ -32,7 +32,7 @@ export function HeroSkeleton() {
 
 export function ProjectSkeleton() {
   return (
-    <div className="w-full h-full flex-shrink-0 flex flex-col md:flex-row p-6 md:p-24 box-border border-r border-white/5 bg-[#050505]">
+    <div className="w-full h-full shrink-0 flex flex-col md:flex-row p-6 md:p-24 box-border border-r border-white/5 bg-[#050505]">
       <div className="w-full md:w-1/2 space-y-8">
         <div className="h-16 w-16 bg-white/10 rounded animate-pulse" />
         <div className="space-y-4">
@@ -55,7 +55,7 @@ export function ProjectSkeleton() {
 export function ContactSkeleton() {
   return (
     <section className="relative min-h-[80vh] w-full bg-[#050505] text-[#f2f2f2] flex flex-col justify-between px-6 md:px-24 pt-32 pb-12">
-      <div className="flex-grow flex flex-col justify-center max-w-[1400px] mx-auto w-full">
+      <div className="grow flex flex-col justify-center max-w-350 mx-auto w-full">
         <div className="h-8 w-48 bg-white/10 rounded animate-pulse mb-8" />
         <div className="h-32 w-full bg-white/10 rounded animate-pulse mb-12" />
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">

@@ -58,7 +58,7 @@ export default function CursorFollower() {
     <>
       {/* Main cursor dot */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 pointer-events-none z-9999 mix-blend-difference"
         style={{
           x: cursorX,
           y: cursorY,
@@ -78,7 +78,7 @@ export default function CursorFollower() {
 
       {/* Trailing circle */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9998]"
+        className="fixed top-0 left-0 pointer-events-none z-9998"
         style={{
           x: cursorX,
           y: cursorY,

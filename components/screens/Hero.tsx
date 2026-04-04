@@ -43,8 +43,8 @@ export default function HeroSection() {
 
       {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px]" />
+        <div className="absolute top-[-10%] right-[-10%] w-125 h-125 bg-purple-900/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-150 h-150 bg-blue-900/10 rounded-full blur-[120px]" />
       </div>
 
       {/* Status Bar */}
@@ -62,17 +62,17 @@ export default function HeroSection() {
       <div className="z-10 mt-20 md:mt-0">
         <div className="overflow-hidden">
           <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference">
-            DIGITAL
+            INTERACTIVE
           </h1>
         </div>
         <div className="overflow-hidden">
           <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference ml-[10vw] md:ml-[15vw]">
-            DESIGNER
+            EXPERIENCE
           </h1>
         </div>
         <div className="overflow-hidden">
            <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference">
-            & DEVELOPER
+            DEVELOPER
           </h1>
         </div>
       </div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
       </div>
       
        <div className="scroll-indicator absolute bottom-12 right-6 md:right-24 hidden md:block">
-         <p className="text-xs uppercase tracking-widest text-white/30 max-w-[200px] text-right">
+         <p className="text-xs uppercase tracking-widest text-white/30 max-w-50 text-right">
            Crafting narrative-driven digital 
            <br/>experiences
          </p>

@@ -46,7 +46,7 @@ export default function About() {
 
   return (
     <section id="about" ref={containerRef} className="relative w-full py-16 sm:py-24 lg:py-32 bg-[#050505] text-[#f2f2f2] overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-24">
+      <div className="max-w-350 mx-auto px-4 sm:px-6 md:px-24">
         
         {/* Section Header */}
         <div className="mb-16 sm:mb-20 md:flex justify-between items-end border-b border-white/10 pb-6 sm:pb-8">
@@ -54,7 +54,7 @@ export default function About() {
                 (001) Philosophy
             </h2>
              <p className="text-xs sm:text-sm font-inter text-right text-white/60 max-w-xs">
-                Design is not just what it looks like and feels like. Design is how it works.
+                Coding is my craft, but storytelling is my passion. I believe the best digital experiences are those that resonate emotionally while delivering seamless performance.
             </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function About() {
                     every interaction is buttery smooth. No lag, no layout shifts, just pure flow.
                  </p>
                  <div className="flex gap-2 sm:gap-3 md:gap-4 mt-6 sm:mt-8 flex-wrap">
-                    {["Next.js", "TypeScript", "GSAP", "Tailwind"].map(tech => (
+                    {["React", "TypeScript", "GSAP", "Tailwind"].map(tech => (
                         <span key={tech} className="px-2 py-1 sm:px-3 sm:py-1 border border-white/10 rounded-full text-xs uppercase tracking-wider text-white/70">
                             {tech}
                         </span>
