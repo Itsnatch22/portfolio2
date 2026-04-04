@@ -4,9 +4,12 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ArrowDown } from "lucide-react";
+import Antigravity from "@/components/Antigravity";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme() || { theme: 'dark' };
 
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -42,10 +45,24 @@ export default function HeroSection() {
       style={{ backgroundColor: 'var(--hero-bg)' }}
     >
 
-      {/* Background Ambience */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-125 h-125 bg-purple-900/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-150 h-150 bg-blue-900/10 rounded-full blur-[120px]" />
+      {/* Interactive Background */}
+      <div className="absolute w-full h-full opacity-30 pointer-events-none">
+        <Antigravity 
+          count={900}
+          color={theme === 'light' ? "#0F0E0E" : "#FFFFFF"}
+          magnetRadius={15}
+          ringRadius={8}
+          waveSpeed={0.3}
+          waveAmplitude={0.8}
+          particleSize={1.5}
+          autoAnimate={true}
+          particleVariance={0.5}
+          rotationSpeed={0.1}
+          depthFactor={0.8}
+          pulseSpeed={2}
+          particleShape="capsule"
+          fieldStrength={12}
+        />
       </div>
 
       {/* Status Bar */}

@@ -1,13 +1,13 @@
-"use client"
-import React, { useState } from "react";
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Geist } from "next/font/google";
 import "./globals.css"
+import { cn } from "@/lib/utils"
+import ThemeClientProvider from "@/components/providers/ThemeClientProvider";
 
-import CursorFollower from "@/components/ui/Cursor";
-import ScrollManager from "@/components/ui/ScrollManager";
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import { cn } from "@/lib/utils";
+export const metadata: Metadata = {
+  title: "Mark's Portfolio",
+  description: "Mark's personal portfolio website",
+}
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -27,19 +27,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [loading, setLoading] = useState(true);
-
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body
-        className={`${playfair.variable} ${inter.variable} antialiased`}
-        style={{ backgroundColor: 'var(--background)' }}
-      >
-        <ThemeProvider>
-          <CursorFollower />
-          <ScrollManager />
+      <body style={{ backgroundColor: 'var(--background)' }}>
+        <ThemeClientProvider>
           {children}
-        </ThemeProvider>
+        </ThemeClientProvider>
       </body>
     </html>
   );
