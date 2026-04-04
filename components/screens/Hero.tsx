@@ -62,17 +62,17 @@ export default function HeroSection() {
       <div className="z-10 mt-20 md:mt-0">
         <div className="overflow-hidden">
           <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference">
-            INTERACTIVE
+            CREATIVE
           </h1>
         </div>
         <div className="overflow-hidden">
           <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference ml-[10vw] md:ml-[15vw]">
-            EXPERIENCE
+            DEVELOPER
           </h1>
         </div>
         <div className="overflow-hidden">
            <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference">
-            DEVELOPER
+            EXPERIENCE
           </h1>
         </div>
       </div>
