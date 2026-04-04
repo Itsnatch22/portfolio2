@@ -49,10 +49,10 @@ export default function Work() {
 
   return (
     <ErrorBoundary>
-      <section id="work" ref={containerRef} className="bg-[#050505] text-[#f2f2f2] relative">
+      <section id="work" ref={containerRef} className="relative" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
         {/* Section Header */}
         <div className="px-4 sm:px-6 md:px-24 py-16 sm:py-24 mb-8 sm:mb-12">
-            <h2 className="text-xs sm:text-sm font-inter tracking-[0.2em] uppercase text-white/40 mb-4">
+            <h2 className="text-xs sm:text-sm font-inter tracking-[0.2em] uppercase mb-4" style={{ color: 'var(--muted)' }}>
                 (002) Selected Works
             </h2>
             <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair max-w-2xl">
@@ -63,37 +63,37 @@ export default function Work() {
         {/* Horizontal Scroll Container */}
         <div ref={horizontalRef} className="min-h-screen md:h-screen w-full flex md:overflow-x-hidden overflow-y-auto md:overflow-y-hidden">
             {PROJECTS.map((project) => (
-                <div key={project.id} className="project-panel w-full md:w-full h-auto md:h-full shrink-0 flex flex-col md:flex-row p-4 sm:p-6 md:p-24 box-border border-r border-white/5 bg-[#050505] mb-8 md:mb-0">
+                <div key={project.id} className="project-panel w-full md:w-full h-auto md:h-full shrink-0 flex flex-col md:flex-row p-4 sm:p-6 md:p-24 box-border border-r mb-8 md:mb-0" style={{ backgroundColor: 'var(--background)', borderColor: 'var(--border-color)' }}>
                     
                     {/* Content Side */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 md:space-y-8 pr-0 md:pr-12 md:max-w-xl">
-                        <span className="text-4xl sm:text-6xl md:text-8xl font-playfair text-white/5 absolute top-16 left-4 sm:left-6 md:static">
+                        <span className="text-4xl sm:text-6xl md:text-8xl font-playfair absolute top-16 left-4 sm:left-6 md:static" style={{ color: 'var(--foreground)', opacity: 0.05 }}>
                             {project.id}
                         </span>
                         
                         <div>
-                            <span className="text-xs uppercase tracking-widest text-accent/70 mb-2 block">{project.category}</span>
-                            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-playfair mb-4 leading-[0.9]">{project.title}</h3>
-                            <p className="text-base sm:text-lg md:text-xl text-white/60 font-inter italic">{project.description}</p>
+                            <span className="text-xs uppercase tracking-widest mb-2 block" style={{ color: 'var(--accent)' }}>{project.category}</span>
+                            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-playfair mb-4 leading-[0.9]" style={{ color: 'var(--foreground)' }}>{project.title}</h3>
+                            <p className="text-base sm:text-lg md:text-xl font-inter italic" style={{ color: 'var(--muted)' }}>{project.description}</p>
                         </div>
 
-                        <div className="space-y-4 md:space-y-6 md:pl-8 border-l border-white/10 my-6 md:my-8">
+                        <div className="space-y-4 md:space-y-6 md:pl-8 border-l my-6 md:my-8" style={{ borderColor: 'var(--border-color)' }}>
                              <div>
-                                <h4 className="text-xs sm:text-sm uppercase tracking-widest text-white/40 mb-1">The Challenge</h4>
-                                <p className="text-white/80 font-inter text-sm md:text-base">{project.challenge}</p>
+                                <h4 className="text-xs sm:text-sm uppercase tracking-widest mb-1" style={{ color: 'var(--muted)' }}>The Challenge</h4>
+                                <p className="font-inter text-sm md:text-base" style={{ color: 'var(--foreground)' }}>{project.challenge}</p>
                              </div>
                              <div>
-                                <h4 className="text-xs sm:text-sm uppercase tracking-widest text-white/40 mb-1">The Idea</h4>
-                                <p className="text-white/80 font-inter text-sm md:text-base">{project.idea}</p>
+                                <h4 className="text-xs sm:text-sm uppercase tracking-widest mb-1" style={{ color: 'var(--muted)' }}>The Idea</h4>
+                                <p className="font-inter text-sm md:text-base" style={{ color: 'var(--foreground)' }}>{project.idea}</p>
                              </div>
                              <div>
-                                <h4 className="text-xs sm:text-sm uppercase tracking-widest text-white/40 mb-1">The Execution</h4>
-                                <p className="text-white/80 font-inter text-sm md:text-base">{project.execution}</p>
+                                <h4 className="text-xs sm:text-sm uppercase tracking-widest mb-1" style={{ color: 'var(--muted)' }}>The Execution</h4>
+                                <p className="font-inter text-sm md:text-base" style={{ color: 'var(--foreground)' }}>{project.execution}</p>
                              </div>
                         </div>
 
                         <div>
-                            <Link href={project.link} className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-colors group touch-manipulation">
+                            <Link href={project.link} className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-colors group touch-manipulation" style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--foreground)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--link-hover)' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--nav-bg)' }}>
                                 <span className="uppercase text-xs sm:text-xs tracking-widest">View Project</span>
                                 <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </Link>
@@ -106,7 +106,7 @@ export default function Work() {
                         <div className="absolute inset-0 flex items-center justify-center">
                             {imageErrors.has(project.id) ? (
                                 <div className="flex items-center justify-center h-full">
-                                    <p className="text-white/40 text-xs sm:text-sm">Image not available</p>
+                                    <p className="text-xs sm:text-sm">Image not available</p>
                                 </div>
                             ) : (
                                 <Image 

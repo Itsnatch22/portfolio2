@@ -45,15 +45,15 @@ export default function About() {
   }, { scope: containerRef });
 
   return (
-    <section id="about" ref={containerRef} className="relative w-full py-16 sm:py-24 lg:py-32 bg-[#050505] text-[#f2f2f2] overflow-hidden">
+    <section id="about" ref={containerRef} className="relative w-full py-16 sm:py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
       <div className="max-w-350 mx-auto px-4 sm:px-6 md:px-24">
         
         {/* Section Header */}
-        <div className="mb-16 sm:mb-20 md:flex justify-between items-end border-b border-white/10 pb-6 sm:pb-8">
-            <h2 className="text-xs sm:text-sm font-inter tracking-[0.2em] uppercase text-white/40 mb-3 sm:mb-4 md:mb-0">
+        <div className="mb-16 sm:mb-20 md:flex justify-between items-end pb-6 sm:pb-8" style={{ borderColor: 'var(--border-color)' }}>
+            <h2 className="text-xs sm:text-sm font-inter tracking-[0.2em] uppercase mb-3 sm:mb-4 md:mb-0" style={{ color: 'var(--muted)' }}>
                 (001) Philosophy
             </h2>
-             <p className="text-xs sm:text-sm font-inter text-right text-white/60 max-w-xs">
+             <p className="text-xs sm:text-sm font-inter text-right max-w-xs" style={{ color: 'var(--muted)' }}>
                 Coding is my craft, but storytelling is my passion. I believe the best digital experiences are those that resonate emotionally while delivering seamless performance.
             </p>
         </div>
@@ -74,15 +74,17 @@ export default function About() {
             
             {/* Column 1 */}
             <div className="about-grid-item md:col-span-5 md:col-start-1 space-y-2">
-                 <span className="text-xs uppercase tracking-widest text-accent/50 block mb-3 sm:mb-4">The Toolset</span>
-                 <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair mb-4 sm:mb-6">Built for Performance</h3>
-                 <p className="text-white/60 font-inter leading-relaxed max-w-md text-sm sm:text-base">
+                 <span className="text-xs uppercase tracking-widest block mb-3 sm:mb-4" style={{ color: 'var(--accent)' }}>
+                   The Toolset
+                 </span>
+                 <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair mb-4 sm:mb-6" style={{ color: 'var(--foreground)' }}>Built for Performance</h3>
+                 <p className="font-inter leading-relaxed max-w-md text-sm sm:text-base" style={{ color: 'var(--muted)' }}>
                     Leveraging modern frameworks and optimization techniques to ensure 
                     every interaction is buttery smooth. No lag, no layout shifts, just pure flow.
                  </p>
                  <div className="flex gap-2 sm:gap-3 md:gap-4 mt-6 sm:mt-8 flex-wrap">
                     {["React", "TypeScript", "GSAP", "Tailwind"].map(tech => (
-                        <span key={tech} className="px-2 py-1 sm:px-3 sm:py-1 border border-white/10 rounded-full text-xs uppercase tracking-wider text-white/70">
+                        <span key={tech} className="px-2 py-1 sm:px-3 sm:py-1 border rounded-full text-xs uppercase tracking-wider" style={{ borderColor: 'var(--border-color)', color: 'var(--link-color)' }}>
                             {tech}
                         </span>
                     ))}
@@ -91,14 +93,16 @@ export default function About() {
 
             {/* Column 2 (Offset) */}
             <div className="about-grid-item md:col-span-5 md:col-start-7 pt-0 md:pt-20 lg:pt-32 space-y-2">
-                 <span className="text-xs uppercase tracking-widest text-accent/50 block mb-3 sm:mb-4">The Vibe</span>
-                 <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair mb-4 sm:mb-6">Designed for Humans</h3>
-                 <p className="text-white/60 font-inter leading-relaxed max-w-md text-sm sm:text-base">
+                 <span className="text-xs uppercase tracking-widest block mb-3 sm:mb-4" style={{ color: 'var(--accent)' }}>
+                   The Vibe
+                 </span>
+                 <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair mb-4 sm:mb-6" style={{ color: 'var(--foreground)' }}>Designed for Humans</h3>
+                 <p className="font-inter leading-relaxed max-w-md text-sm sm:text-base" style={{ color: 'var(--muted)' }}>
                    Technology feels cold without a story. I aim to inject personality 
                    and warmth into digital voids. Visual silence is as important as the content itself.
                  </p>
                  <div className="mt-6 sm:mt-8">
-                    <Link href="#contact" className="group inline-flex items-center gap-2 text-white border-b border-white/30 pb-1 hover:border-white transition-colors touch-manipulation">
+                    <Link href="#contact" className="group inline-flex items-center gap-2 border-b pb-1 hover:transition-colors touch-manipulation" style={{ color: 'var(--foreground)', borderColor: 'var(--border-color)' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--foreground)' }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)' }}>
                         <span className="uppercase text-xs sm:text-sm tracking-widest">Let&apos;s Collaborate</span>
                         <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                     </Link>

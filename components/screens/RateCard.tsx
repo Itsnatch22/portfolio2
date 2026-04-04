@@ -207,7 +207,8 @@ export default function RateCardScreen() {
   return (
     <div
       ref={containerRef}
-      className="relative min-h-screen overflow-hidden bg-[#050505] text-[#f2f2f2]"
+      className="relative min-h-screen overflow-hidden"
+      style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-10%] top-24 h-105 w-105 rounded-full bg-emerald-500/10 blur-[140px]" />
@@ -218,7 +219,8 @@ export default function RateCardScreen() {
       <div className="rate-topbar relative z-10 mx-auto flex w-full max-w-350 items-center justify-between px-6 py-6 md:px-24">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-white/60 transition-colors hover:text-white"
+          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] transition-colors"
+          style={{ color: 'var(--muted)' }}
         >
           <ArrowLeft className="h-4 w-4" />
           Back Home
@@ -227,7 +229,8 @@ export default function RateCardScreen() {
           href={buildWhatsAppLink("Hi Mark, I saw your rate card and I'd like to talk about my website project.")}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.24em] text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+          className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs uppercase tracking-[0.24em] transition-colors"
+          style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)', color: 'var(--link-color)' }}
         >
           <MessageCircle className="h-4 w-4" />
           WhatsApp
@@ -235,26 +238,26 @@ export default function RateCardScreen() {
       </div>
 
       <main className="relative z-10 mx-auto max-w-350 px-6 pb-20 md:px-24 md:pb-28">
-        <section className="grid gap-14 border-b border-white/10 pb-14 pt-10 md:grid-cols-[1.35fr_0.9fr] md:gap-16 md:pb-20">
+        <section className="grid gap-14 border-b pb-14 pt-10 md:grid-cols-[1.35fr_0.9fr] md:gap-16 md:pb-20" style={{ borderColor: 'var(--border-color)' }}>
           <div>
-            <p className="rate-eyebrow mb-6 text-xs uppercase tracking-[0.34em] text-white/45">
+            <p className="rate-eyebrow mb-6 text-xs uppercase tracking-[0.34em]" style={{ color: 'var(--muted)' }}>
               Rate Card / Starting Prices
             </p>
 
             <div className="space-y-2">
               <div className="overflow-hidden">
-                <h1 className="rate-title-line text-[16vw] font-playfair leading-[0.88] tracking-[-0.05em] text-white md:text-[7.4vw]">
+                <h1 className="rate-title-line text-[16vw] font-playfair leading-[0.88] tracking-[-0.05em] md:text-[7.4vw]" style={{ color: 'var(--foreground)' }}>
                   WEBSITE
                 </h1>
               </div>
               <div className="overflow-hidden">
-                <h1 className="rate-title-line ml-[10vw] text-[16vw] font-playfair leading-[0.88] tracking-[-0.05em] text-white md:ml-[5vw] md:text-[7.4vw]">
+                <h1 className="rate-title-line ml-[10vw] text-[16vw] font-playfair leading-[0.88] tracking-[-0.05em] md:ml-[5vw] md:text-[7.4vw]" style={{ color: 'var(--foreground)' }}>
                   CHARGES
                 </h1>
               </div>
             </div>
 
-            <p className="rate-copy mt-8 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+            <p className="rate-copy mt-8 max-w-2xl text-base leading-relaxed md:text-lg" style={{ color: 'var(--muted)' }}>
               Clean pricing for common website types, designed to help clients
               understand where to start. Final quotes depend on content, number
               of pages, integrations, and custom functionality.
@@ -264,7 +267,8 @@ export default function RateCardScreen() {
               {["Responsive", "SEO-ready structure"].map((item) => (
                 <span
                   key={item}
-                  className="rate-chip rounded-full border border-white/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-white/65"
+                  className="rate-chip rounded-full border px-4 py-2 text-xs uppercase tracking-[0.22em]"
+                  style={{ borderColor: 'var(--border-color)', color: 'var(--link-color)' }}
                 >
                   {item}
                 </span>
@@ -272,34 +276,34 @@ export default function RateCardScreen() {
             </div>
           </div>
 
-          <aside className="rate-summary rounded-4xl border border-white/10 bg-white/3 p-6 backdrop-blur-sm md:p-8">
+          <aside className="rate-summary rounded-4xl border p-6 backdrop-blur-sm md:p-8" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)' }}>
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-white/40">
+                <p className="text-xs uppercase tracking-[0.28em]" style={{ color: 'var(--muted)' }}>
                   Direct Contact
                 </p>
-                <h2 className="mt-4 text-3xl font-playfair text-white md:text-4xl">
+                <h2 className="mt-4 text-3xl font-playfair md:text-4xl" style={{ color: 'var(--foreground)' }}>
                   Let&apos;s price your next build.
                 </h2>
               </div>
-              <div className="rounded-full border border-white/10 bg-white/5 p-3">
-                <Phone className="h-5 w-5 text-white/80" />
+              <div className="rounded-full border p-3" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)' }}>
+                <Phone className="h-5 w-5" style={{ color: 'var(--muted)' }} />
               </div>
             </div>
 
-            <div className="mt-8 space-y-4 border-t border-white/10 pt-6">
-              <div className="flex items-center justify-between gap-4 text-sm text-white/65">
+            <div className="mt-8 space-y-4 border-t pt-6" style={{ borderColor: 'var(--border-color)' }}>
+              <div className="flex items-center justify-between gap-4 text-sm" style={{ color: 'var(--muted)' }}>
                 <span className="uppercase tracking-[0.22em]">Phone</span>
-                <span className="text-base text-white">{PHONE_DISPLAY}</span>
+                <span className="text-base" style={{ color: 'var(--foreground)' }}>{PHONE_DISPLAY}</span>
               </div>
-              <div className="flex items-center justify-between gap-4 text-sm text-white/65">
+              <div className="flex items-center justify-between gap-4 text-sm" style={{ color: 'var(--muted)' }}>
                 <span className="uppercase tracking-[0.22em]">Currency</span>
-                <span className="text-base text-white">USD</span>
+                <span className="text-base" style={{ color: 'var(--foreground)' }}>USD</span>
               </div>
-              <div className="flex items-center justify-between gap-4 text-sm text-white/65">
+              <div className="flex items-center justify-between gap-4 text-sm" style={{ color: 'var(--muted)' }}>
                 <span className="uppercase tracking-[0.22em]">Typical reply</span>
-                <span className="inline-flex items-center gap-2 text-base text-white">
-                  <Clock3 className="h-4 w-4 text-white/60" />
+                <span className="inline-flex items-center gap-2 text-base" style={{ color: 'var(--foreground)' }}>
+                  <Clock3 className="h-4 w-4" style={{ color: 'var(--muted)' }} />
                   Same day
                 </span>
               </div>
@@ -310,7 +314,8 @@ export default function RateCardScreen() {
                 href={buildWhatsAppLink("Hi Mark, I saw your rate card and I'd like to discuss a website project.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-between rounded-full border border-white/10 bg-white px-5 py-4 text-sm font-medium uppercase tracking-[0.18em] text-black transition-transform hover:scale-[1.01]"
+                className="inline-flex w-full items-center justify-between rounded-full border px-5 py-4 text-sm font-medium uppercase tracking-[0.18em] transition-transform hover:scale-[1.01]"
+                style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--foreground)', color: 'var(--background)' }}
               >
                 Chat on WhatsApp
                 <ArrowUpRight className="h-4 w-4" />
@@ -320,12 +325,12 @@ export default function RateCardScreen() {
         </section>
 
         <section className="py-14 md:py-20">
-          <div className="rate-band mb-12 flex items-center justify-between gap-6 border-b border-t border-white/10 py-5">
-            <div className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-white/45">
+          <div className="rate-band mb-12 flex items-center justify-between gap-6 border-b border-t py-5" style={{ borderColor: 'var(--border-color)' }}>
+            <div className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.28em]" style={{ color: 'var(--muted)' }}>
               <Globe className="h-4 w-4" />
               Different website types
             </div>
-            <p className="hidden max-w-xl text-right text-sm text-white/55 md:block">
+            <p className="hidden max-w-xl text-right text-sm md:block" style={{ color: 'var(--muted)' }}>
               These are starting prices for projects with a clear scope. Extra
               pages, payment systems, dashboards, copywriting, or custom
               integrations can change the final quote.
@@ -339,7 +344,8 @@ export default function RateCardScreen() {
               return (
                 <article
                   key={card.title}
-                  className="rate-card group relative overflow-hidden rounded-[30px] border border-white/10 bg-white/3 p-6 md:p-7"
+                  className="rate-card group relative overflow-hidden rounded-[30px] border p-6 md:p-7"
+                  style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)' }}
                 >
                   <div
                     className={`pointer-events-none absolute inset-0 bg-linear-to-br ${card.accent} opacity-100 transition-opacity duration-500 group-hover:opacity-70`}
@@ -348,48 +354,48 @@ export default function RateCardScreen() {
 
                   <div className="relative z-10 flex h-full flex-col">
                     <div className="flex items-start justify-between gap-4">
-                      <div className="rounded-full border border-white/10 bg-black/20 p-3">
-                        <Icon className="h-5 w-5 text-white/80" />
+                      <div className="rounded-full border p-3" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)' }}>
+                        <Icon className="h-5 w-5" style={{ color: 'var(--muted)' }} />
                       </div>
-                      <span className="text-[11px] uppercase tracking-[0.24em] text-white/40">
+                      <span className="text-[11px] uppercase tracking-[0.24em]" style={{ color: 'var(--muted)' }}>
                         Starting from
                       </span>
                     </div>
 
                     <div className="mt-8">
-                      <h3 className="text-3xl font-playfair leading-tight text-white">
+                      <h3 className="text-3xl font-playfair leading-tight" style={{ color: 'var(--foreground)' }}>
                         {card.title}
                       </h3>
-                      <p className="mt-3 text-3xl font-medium tracking-tight text-white md:text-4xl">
+                      <p className="mt-3 text-3xl font-medium tracking-tight md:text-4xl" style={{ color: 'var(--foreground)' }}>
                         {card.price}
                       </p>
-                      <p className="mt-4 text-sm leading-relaxed text-white/65">
+                      <p className="mt-4 text-sm leading-relaxed" style={{ color: 'var(--muted)' }}>
                         {card.bestFor}
                       </p>
                     </div>
 
-                    <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-4 text-sm text-white/65">
+                    <div className="mt-6 rounded-2xl border p-4 text-sm" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)', color: 'var(--muted)' }}>
                       <div className="flex items-center justify-between gap-4">
                         <span className="uppercase tracking-[0.22em]">Timeline</span>
-                        <span className="text-white">{card.timeline}</span>
+                        <span className="text-base" style={{ color: 'var(--foreground)' }}>{card.timeline}</span>
                       </div>
                     </div>
 
-                    <ul className="mt-6 space-y-3 text-sm text-white/70">
+                    <ul className="mt-6 space-y-3 text-sm" style={{ color: 'var(--muted)' }}>
                       {card.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/70" />
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full" style={{ backgroundColor: 'var(--foreground)' }} />
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="mt-8 flex items-center justify-between gap-4 border-t border-white/10 pt-6">
+                    <div className="mt-8 flex items-center justify-between gap-4 border-t pt-6" style={{ borderColor: 'var(--border-color)' }}>
                       <div>
-                        <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">
+                        <p className="text-[11px] uppercase tracking-[0.24em]" style={{ color: 'var(--muted)' }}>
                           Call / WhatsApp
                         </p>
-                        <p className="mt-2 text-lg text-white">{PHONE_DISPLAY}</p>
+                        <p className="mt-2 text-lg" style={{ color: 'var(--foreground)' }}>{PHONE_DISPLAY}</p>
                       </div>
 
                       <Magnetic className="inline-block">
@@ -397,7 +403,8 @@ export default function RateCardScreen() {
                           href={buildWhatsAppLink(card.message)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-white/20"
+                          className="inline-flex items-center gap-2 rounded-full border px-4 py-3 text-xs uppercase tracking-[0.2em] transition-colors"
+                          style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)', color: 'var(--foreground)' }}
                         >
                           Contact
                           <ArrowUpRight className="h-4 w-4" />
@@ -412,29 +419,30 @@ export default function RateCardScreen() {
         </section>
 
         <section className="pb-4">
-          <div className="rounded-[34px] border border-white/10 bg-white/3 px-6 py-10 md:px-10 md:py-12">
+          <div className="rounded-[34px] border px-6 py-10 md:px-10 md:py-12" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--nav-bg)' }}>
             <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
               <div className="max-w-2xl">
-                <p className="text-xs uppercase tracking-[0.28em] text-white/45">
+                <p className="text-xs uppercase tracking-[0.28em]" style={{ color: 'var(--muted)' }}>
                   Need a custom quote?
                 </p>
-                <h2 className="mt-4 text-4xl font-playfair leading-tight text-white md:text-5xl">
+                <h2 className="mt-4 text-4xl font-playfair leading-tight md:text-5xl" style={{ color: 'var(--foreground)' }}>
                   Share your scope and I&apos;ll quote it properly.
                 </h2>
-                <p className="mt-4 text-base leading-relaxed text-white/65">
+                <p className="mt-4 text-base leading-relaxed" style={{ color: 'var(--muted)' }}>
                   If your project needs advanced integrations, strategy, or a
                   larger content structure, the fastest route is WhatsApp.
                 </p>
               </div>
 
               <div className="flex flex-col gap-4 md:items-end">
-                <p className="text-sm text-white/55">Phone: {PHONE_DISPLAY}</p>
+                <p className="text-sm" style={{ color: 'var(--muted)' }}>Phone: {PHONE_DISPLAY}</p>
                 <Magnetic className="inline-block">
                   <a
                     href={buildWhatsAppLink("Hi Mark, I need a custom website quote. Here's a short summary of my project:")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-medium uppercase tracking-[0.2em] text-black transition-transform hover:scale-[1.01]"
+                    className="inline-flex items-center gap-3 rounded-full px-6 py-4 text-sm font-medium uppercase tracking-[0.2em] transition-transform hover:scale-[1.01]"
+                    style={{ backgroundColor: 'var(--foreground)', color: 'var(--background)' }}
                   >
                     Start on WhatsApp
                     <MessageCircle className="h-4 w-4" />

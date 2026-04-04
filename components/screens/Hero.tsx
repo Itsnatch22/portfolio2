@@ -38,7 +38,8 @@ export default function HeroSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative min-h-screen w-full bg-[#050505] flex flex-col justify-center px-6 md:px-24 overflow-hidden"
+      className="relative min-h-screen w-full flex flex-col justify-center px-6 md:px-24 overflow-hidden"
+      style={{ backgroundColor: 'var(--hero-bg)' }}
     >
 
       {/* Background Ambience */}
@@ -53,7 +54,7 @@ export default function HeroSection() {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
         </span>
-        <span className="text-xs md:text-sm uppercase tracking-widest text-white/50 font-inter">
+        <span className="text-xs md:text-sm uppercase tracking-widest font-inter" style={{ color: 'var(--muted)' }}>
           Available for new projects
         </span>
       </div>
@@ -61,17 +62,17 @@ export default function HeroSection() {
       {/* Main Typography */}
       <div className="z-10 mt-20 md:mt-0">
         <div className="overflow-hidden">
-          <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference">
+          <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium tracking-tighter mix-blend-difference" style={{ color: 'var(--foreground)' }}>
             CREATIVE
           </h1>
         </div>
         <div className="overflow-hidden">
-          <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference ml-[10vw] md:ml-[15vw]">
+          <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium tracking-tighter mix-blend-difference ml-[10vw] md:ml-[15vw]" style={{ color: 'var(--foreground)' }}>
             DEVELOPER
           </h1>
         </div>
         <div className="overflow-hidden">
-           <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium text-[#f2f2f2] tracking-tighter mix-blend-difference">
+           <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium tracking-tighter mix-blend-difference" style={{ color: 'var(--foreground)' }}>
             EXPERIENCE
           </h1>
         </div>
@@ -79,11 +80,11 @@ export default function HeroSection() {
 
       {/* Scroll Indicator */}
       <div className="scroll-indicator absolute bottom-12 left-6 md:left-24 animate-bounce">
-         <ArrowDown className="text-white/30 w-6 h-6" />
+         <ArrowDown className="w-6 h-6" style={{ color: 'var(--muted)' }} />
       </div>
       
        <div className="scroll-indicator absolute bottom-12 right-6 md:right-24 hidden md:block">
-         <p className="text-xs uppercase tracking-widest text-white/30 max-w-50 text-right">
+         <p className="text-xs uppercase tracking-widest max-w-50 text-right" style={{ color: 'var(--muted)' }}>
            Crafting narrative-driven digital 
            <br/>experiences
          </p>

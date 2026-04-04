@@ -58,14 +58,15 @@ export default function Contact() {
       <section 
         id="contact"
         ref={containerRef} 
-        className="relative min-h-[80vh] w-full bg-[#050505] text-[#f2f2f2] flex flex-col justify-between px-6 md:px-24 pt-32 pb-12 overflow-hidden"
+        className="relative min-h-[80vh] w-full flex flex-col justify-between px-6 md:px-24 pt-32 pb-12 overflow-hidden"
+        style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}
       >
         {/* Background Subtle Gradient */}
-         <div className="absolute bottom-0 right-0 w-125 h-125 bg-white/5 rounded-full blur-[150px] pointer-events-none" />
+         <div className="absolute bottom-0 right-0 w-125 h-125 rounded-full blur-[150px] pointer-events-none" style={{ backgroundColor: 'var(--foreground)', opacity: 0.05 }} />
 
         <div className="grow flex flex-col justify-center max-w-350 mx-auto w-full">
           <div className="mb-8">
-              <h2 className="text-sm font-inter tracking-[0.2em] uppercase text-white/40 mb-4">
+              <h2 className="text-sm font-inter tracking-[0.2em] uppercase mb-4" style={{ color: 'var(--muted)' }}>
                   (003) Get in Touch
               </h2>
           </div>
@@ -80,7 +81,10 @@ export default function Contact() {
               <a 
                 ref={emailRef}
                 href="mailto:kamaumark996@gmail.com" 
-                className="group text-2xl md:text-4xl font-inter border-b border-white/20 pb-2 hover:border-white transition-colors inline-flex items-center gap-4"
+                className="group text-2xl md:text-4xl font-inter border-b pb-2 inline-flex items-center gap-4 transition-colors"
+                style={{ borderColor: 'var(--border-color)', color: 'var(--foreground)' }}
+                onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--foreground)'}
+                onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--border-color)'}
               >
                 kamaumark996@gmail.com
                 <ArrowUpRight className="w-8 h-8 md:w-12 md:h-12 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
@@ -91,7 +95,10 @@ export default function Contact() {
                   <Link 
                     key={social.name} 
                     href={social.href} 
-                    className="p-3 border border-white/10 rounded-full hover:bg-white/10 transition-colors"
+                    className="p-3 border rounded-full transition-colors"
+                    style={{ borderColor: 'var(--border-color)', color: 'var(--link-color)' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--nav-bg)'; e.currentTarget.style.color = 'var(--foreground)' }}
+                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'var(--link-color)' }}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
@@ -104,14 +111,14 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <footer className="w-full max-w-350 mx-auto pt-24 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] text-white/30 font-inter">
+        <footer className="w-full max-w-350 mx-auto pt-24 border-t flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-inter" style={{ borderColor: 'var(--border-color)', color: 'var(--muted)' }}>
           <div>
              &copy; {new Date().getFullYear()} Mark. All rights reserved.
           </div>
           <div className="flex gap-8">
-              <Link href="#about" className="hover:text-white transition-colors">About</Link>
-              <Link href="#work" className="hover:text-white transition-colors">Work</Link>
-              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="#about" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--foreground)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>About</Link>
+              <Link href="#work" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--foreground)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Work</Link>
+              <Link href="/privacy" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--foreground)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Privacy Policy</Link>
           </div>
           <div>
               Built with ❤️
