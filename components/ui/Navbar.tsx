@@ -44,8 +44,8 @@ export default function Navbar() {
   }, { dependencies: [isMobileMenuOpen], scope: navRef, revertOnUpdate: true });
 
   const navLinks = [
-    { name: "Work", href: "#work" },
     { name: "About", href: "#about" },
+    { name: "Work", href: "#work" },
     { name: "Rates", href: "/rate-card" },
     { name: "Contact", href: "#contact" },
   ];

@@ -109,8 +109,8 @@ export default function Contact() {
              &copy; {new Date().getFullYear()} Mark. All rights reserved.
           </div>
           <div className="flex gap-8">
-              <Link href="#work" className="hover:text-white transition-colors">Work</Link>
               <Link href="#about" className="hover:text-white transition-colors">About</Link>
+              <Link href="#work" className="hover:text-white transition-colors">Work</Link>
               <Link href="/privacy" className="hover:text-white transition-colors text-[8px]">Privacy Policy</Link>
           </div>
           <div>
