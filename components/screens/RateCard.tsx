@@ -261,7 +261,7 @@ export default function RateCardScreen() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              {["Responsive", "SEO-ready structure", "WhatsApp CTA", "GSAP motion"].map((item) => (
+              {["Responsive", "SEO-ready structure"].map((item) => (
                 <span
                   key={item}
                   className="rate-chip rounded-full border border-white/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-white/65"
