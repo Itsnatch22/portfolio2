@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundary from "../ui/ErrorBoundary";
 import { PROJECTS } from "@/constants";
 
 gsap.registerPlugin(ScrollTrigger);

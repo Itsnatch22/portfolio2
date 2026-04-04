@@ -46,6 +46,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Work", href: "#work" },
     { name: "About", href: "#about" },
+    { name: "Rates", href: "/rate-card" },
     { name: "Contact", href: "#contact" },
   ];
 

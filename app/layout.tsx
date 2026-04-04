@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css"
 
-import CursorFollower from "@/components/Cursor";
-import ScrollManager from "@/components/ScrollManager";
-import Preloader from "@/components/Preloader";
+import CursorFollower from "@/components/ui/Cursor";
+import ScrollManager from "@/components/ui/ScrollManager";
+import Preloader from "@/components/ui/Preloader";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",

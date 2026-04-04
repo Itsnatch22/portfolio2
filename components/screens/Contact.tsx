@@ -8,7 +8,7 @@ import { ArrowUpRight} from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
-import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundary from "../ui/ErrorBoundary";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/ui/Navbar";
 
 export default function PrivacyPolicy() {
   return (
