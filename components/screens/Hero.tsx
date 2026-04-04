@@ -41,12 +41,12 @@ export default function HeroSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative min-h-screen w-full flex flex-col justify-center px-6 md:px-24 overflow-hidden"
+      className="relative min-h-screen w-full flex flex-col justify-center px-4 sm:px-6 md:px-24 overflow-hidden"
       style={{ backgroundColor: 'var(--hero-bg)' }}
     >
 
       {/* Interactive Background */}
-      <div className="absolute w-full h-full opacity-30 pointer-events-none">
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
         <Antigravity 
           count={900}
           color={theme === 'light' ? "#0F0E0E" : "#FFFFFF"}
@@ -66,7 +66,7 @@ export default function HeroSection() {
       </div>
 
       {/* Status Bar */}
-      <div className="status-bar absolute top-12 md:top-24 left-6 md:left-24 flex items-center gap-3 z-10">
+      <div className="status-bar absolute top-10 md:top-24 left-4 md:left-24 flex items-center gap-3 z-10">
         <span className="relative flex h-3 w-3">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
@@ -79,28 +79,28 @@ export default function HeroSection() {
       {/* Main Typography */}
       <div className="z-10 mt-20 md:mt-0">
         <div className="overflow-hidden">
-          <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium tracking-tighter mix-blend-difference" style={{ color: 'var(--foreground)' }}>
+          <h1 className="hero-title-line text-[14vw] sm:text-[12.5vw] md:text-[10vw] lg:text-[8vw] leading-[0.98] sm:leading-[0.95] md:leading-[0.88] font-playfair font-medium tracking-tighter mix-blend-difference max-w-[90vw] sm:max-w-[85vw]" style={{ color: 'var(--foreground)' }}>
             CREATIVE
           </h1>
         </div>
         <div className="overflow-hidden">
-          <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium tracking-tighter mix-blend-difference ml-[10vw] md:ml-[15vw]" style={{ color: 'var(--foreground)' }}>
+          <h1 className="hero-title-line text-[14vw] sm:text-[12.5vw] md:text-[10vw] lg:text-[8vw] leading-[0.98] sm:leading-[0.95] md:leading-[0.88] font-playfair font-medium tracking-tighter mix-blend-difference ml-[4vw] sm:ml-[6vw] md:ml-[10vw] max-w-[86vw] sm:max-w-[80vw]" style={{ color: 'var(--foreground)' }}>
             DEVELOPER
           </h1>
         </div>
         <div className="overflow-hidden">
-           <h1 className="hero-title-line text-[12vw] leading-[0.85] font-playfair font-medium tracking-tighter mix-blend-difference" style={{ color: 'var(--foreground)' }}>
+           <h1 className="hero-title-line text-[14vw] sm:text-[12.5vw] md:text-[10vw] lg:text-[8vw] leading-[0.98] sm:leading-[0.95] md:leading-[0.88] font-playfair font-medium tracking-tighter mix-blend-difference max-w-[90vw] sm:max-w-[85vw]" style={{ color: 'var(--foreground)' }}>
             EXPERIENCE
           </h1>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="scroll-indicator absolute bottom-12 left-6 md:left-24 animate-bounce">
+      <div className="scroll-indicator absolute bottom-12 left-4 md:left-24 animate-bounce">
          <ArrowDown className="w-6 h-6" style={{ color: 'var(--muted)' }} />
       </div>
       
-       <div className="scroll-indicator absolute bottom-12 right-6 md:right-24 hidden md:block">
+       <div className="scroll-indicator absolute bottom-12 right-4 md:right-24 hidden md:block">
          <p className="text-xs uppercase tracking-widest max-w-50 text-right" style={{ color: 'var(--muted)' }}>
            Crafting narrative-driven digital 
            <br/>experiences
