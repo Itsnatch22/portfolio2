@@ -83,7 +83,7 @@ export default function About() {
                     every interaction is buttery smooth. No lag, no layout shifts, just pure flow.
                  </p>
                  <div className="flex gap-2 sm:gap-3 md:gap-4 mt-6 sm:mt-8 flex-wrap">
-                    {["React", "TypeScript", "GSAP", "Tailwind"].map(tech => (
+                    {["HTML", "CSS", "React", "TypeScript", "GSAP", "Tailwind"].map(tech => (
                         <span key={tech} className="px-2 py-1 sm:px-3 sm:py-1 border rounded-full text-xs uppercase tracking-wider" style={{ borderColor: 'var(--border-color)', color: 'var(--link-color)' }}>
                             {tech}
                         </span>
