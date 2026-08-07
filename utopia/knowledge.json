@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "keywords": ["who", "about", "yourself", "you", "introduce", "tell me"],
+    "answer": "Hey! I'm Mark, a software developer based in Nairobi, Kenya. I build full-stack products with a strong focus on fintech and AI. Currently the founder of EaziWage — an earned wage access platform serving employees and employers across East Africa."
+  },
+  {
+    "id": 2,
+    "keywords": ["eaziwage", "product", "startup", "fintech", "company"],
+    "answer": "EaziWage is a fintech earned wage access platform I founded, targeting Kenya, Uganda, Tanzania, and Rwanda. It lets employees access their earned wages before payday — zero interest, zero loans. Employers get a retention and productivity tool at no cash cost. Built on Next.js, Supabase, and integrated with mobile money rails like M-PESA and MTN MoMo."
+  },
+  {
+    "id": 3,
+    "keywords": ["stack", "tech", "technologies", "tools", "use", "built with"],
+    "answer": "My core stack is Next.js, TypeScript, Tailwind CSS, and Supabase. For animations I use Framer Motion and GSAP. I also work with Python, SQL, and have experience integrating third-party APIs like Dusupay, Pusher, and the Anthropic Claude API. I use WindSurf, Kilo Code, and Gemini CLI as AI coding tools."
+  },
+  {
+    "id": 4,
+    "keywords": ["wiza", "ai", "assistant", "coach", "financial"],
+    "answer": "Wiza is EaziWage's AI-powered financial coaching assistant, built using the Anthropic Claude API. It gives employees personalized financial guidance based on their wage and advance history. It's one of my favorite features I've shipped — an AI that actually knows your financial context, not just generic advice."
+  },
+  {
+    "id": 5,
+    "keywords": ["experience", "years", "long", "background", "journey"],
+    "answer": "I'm a self-driven full-stack developer with hands-on experience building production fintech products. My background spans frontend (React, Next.js), backend (Node.js, Supabase, PostgreSQL), and AI integrations. I believe in learning by building real things rather than just following tutorials."
+  },
+  {
+    "id": 6,
+    "keywords": ["hire", "available", "freelance", "open", "work together", "collaborate"],
+    "answer": "I'm selectively open to interesting opportunities — especially in fintech, AI, or products that matter. If you're building something meaningful, let's talk. Reach out via email or LinkedIn and I'll get back to you."
+  },
+  {
+    "id": 7,
+    "keywords": ["contact", "email", "reach", "find", "social", "linkedin", "github"],
+    "answer": "You can find me on LinkedIn and GitHub, or drop me an email directly. Links are in the footer of this portfolio. I try to respond within 24 hours."
+  },
+  {
+    "id": 8,
+    "keywords": ["projects", "portfolio", "work", "built", "shipped"],
+    "answer": "My flagship project is EaziWage — a full fintech platform with employer and employee dashboards, AI coaching, mobile money integrations, and a marketing site. I've also explored e-commerce (VeloShop) and various open source tooling. I build things end to end, from database schema to UI animations."
+  },
+  {
+    "id": 9,
+    "keywords": ["education", "school", "study", "degree", "university", "college"],
+    "answer": "I'm a self-taught developer. My real education has been building production software, reading docs, and shipping things that real users depend on. I supplement that with structured certifications — currently completing Anthropic's Claude API course on Skilljar."
+  },
+  {
+    "id": 10,
+    "keywords": ["certifications", "certificates", "courses", "learning"],
+    "answer": "I'm currently completing Anthropic's official Claude API certification on Skilljar — which is directly relevant since I've already built production AI features with Claude. I'm also pursuing Google Cloud certifications to formalize my cloud development knowledge."
+  },
+  {
+    "id": 11,
+    "keywords": ["goals", "future", "plans", "next", "vision"],
+    "answer": "Short term — get EaziWage to its first 1,000 active employees across East Africa and close our first enterprise employer partnerships. Long term — build financial infrastructure that actually works for the African workforce, not just adapts Western models."
+  },
+  {
+    "id": 12,
+    "keywords": ["location", "based", "where", "country", "nairobi", "kenya"],
+    "answer": "I'm based in Nairobi, Kenya. I work across East African markets — Kenya, Uganda, Tanzania, and Rwanda — and build products specifically for this context, not as an afterthought."
+  },
+  {
+    "id": 13,
+    "keywords": ["hobbies", "interests", "outside", "fun", "free time", "games"],
+    "answer": "Outside of code I'm into mobile gaming (COD Mobile when my device cooperates 😂), keeping up with tech releases, and thinking about product ideas. I also have a thing for clean UI design — I can spend way too long perfecting an animation that most users won't even notice."
+  },
+  {
+    "id": 14,
+    "keywords": ["design", "ui", "ux", "frontend", "animations", "motion"],
+    "answer": "Frontend and design are where I have the most fun. I'm obsessed with motion design — GSAP ScrollTrigger, Framer Motion spring animations, Three.js for 3D. I care deeply about making interfaces feel premium without being bloated. EaziWage's marketing site is probably the best example of this right now."
+  },
+  {
+    "id": 15,
+    "keywords": ["database", "supabase", "postgres", "sql", "backend"],
+    "answer": "I work extensively with PostgreSQL via Supabase — designing schemas, writing RLS policies, building edge functions, and optimizing queries. EaziWage's database covers everything from multi-country employer onboarding to advance lifecycle management and KYC tracking."
+  },
+  {
+    "id": 16,
+    "keywords": ["hello", "hi", "hey", "morning", "afternoon", "evening", "sup"],
+    "answer": "Hey there! 👋 I'm Mark's portfolio assistant. Ask me anything about his work, stack, projects, or how to get in touch. I'll do my best to help!"
+  },
+  {
+    "id": 17,
+    "keywords": ["thanks", "thank you", "appreciate", "helpful"],
+    "answer": "Glad I could help! 😄 Feel free to ask anything else, or hit the contact link to reach Mark directly."
+  },
+  {
+    "id": 18,
+    "keywords": ["bye", "goodbye", "later", "ciao", "see you"],
+    "answer": "Later! 👋 Feel free to come back anytime, or reach out to Mark directly through the contact section."
+  }
+]

@@ -3,6 +3,7 @@ import HeroSection from "@/components/screens/Hero";
 import Work from "@/components/screens/Work";
 import Navbar from "@/components/ui/Navbar";
 import Contact from "@/components/screens/Contact";
+import UtopiaChatbot from "@/components/chatbot/UtopiaChatbot";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Philosophy/>
       <Work/>
       <Contact />
+      <UtopiaChatbot />
     </main>
   )
 }
