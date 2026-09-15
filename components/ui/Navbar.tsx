@@ -26,13 +26,17 @@ export default function Navbar() {
   };
 
   useGSAP(() => {
-    gsap.from(navRef.current, {
-      y: -100,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-      delay: 2.2, // Adjust for preloader
-    });
+    gsap.fromTo(
+      navRef.current,
+      { y: -24, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        ease: "power3.out",
+        delay: 2.2,
+      }
+    );
   }, { scope: navRef });
 
   useGSAP(() => {
@@ -56,8 +60,12 @@ export default function Navbar() {
     <>
       <header
         ref={navRef}
-        className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-24 py-2 mix-blend-difference backdrop-blur-md"
-        style={{ backgroundColor: 'var(--nav-bg)' }}
+        className="fixed top-0 left-0 z-50 flex w-full items-center justify-between border-b border-transparent px-6 py-2 backdrop-blur-xl transition-all duration-300 ease-out md:px-24"
+        style={{
+          backgroundColor: 'var(--nav-bg)',
+          borderColor: 'var(--border-color)',
+          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
+        }}
       >
         <Magnetic>
           <Link href="/" className="text-xl font-playfair font-bold tracking-tighter block p-2" style={{ color: 'var(--foreground)' }}>
@@ -72,8 +80,10 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 target="_blank"
-                className="text-xs uppercase tracking-[0.2em] transition-colors p-2"
+                className="p-2 text-xs uppercase tracking-[0.2em] transition-colors duration-200"
                 style={{ color: 'var(--link-color)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--foreground)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--link-color)'; }}
               >
                 {link.name}
               </Link>
@@ -87,11 +97,13 @@ export default function Navbar() {
           <ThemeToggle />
           <button
             onClick={toggleMobileMenu}
-            className="p-2 transition-colors"
+            className="p-2 transition-colors duration-200"
             style={{ color: 'var(--link-color)' }}
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--foreground)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--link-color)'; }}
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />

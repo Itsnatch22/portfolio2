@@ -91,9 +91,21 @@ export default function Work() {
                         </div>
 
                         <div>
-                            <Link href={project.link} className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-colors group touch-manipulation" style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--foreground)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--link-hover)' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--nav-bg)' }}>
-                                <span className="uppercase text-xs sm:text-xs tracking-widest">View Project</span>
-                                <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                            <Link
+                                href={project.link}
+                                className="inline-flex items-center gap-2 rounded-full px-4 py-2 transition-all duration-300 group touch-manipulation sm:px-6 sm:py-3"
+                                style={{ backgroundColor: 'var(--nav-bg)', color: 'var(--foreground)', border: '1px solid var(--border-color)' }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = 'var(--link-hover)';
+                                    e.currentTarget.style.color = 'var(--background)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = 'var(--nav-bg)';
+                                    e.currentTarget.style.color = 'var(--foreground)';
+                                }}
+                            >
+                                <span className="uppercase text-xs tracking-widest sm:text-xs">View Project</span>
+                                <ArrowUpRight className="h-3 w-3 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 sm:h-4 sm:w-4" />
                             </Link>
                         </div>
                     </div>
