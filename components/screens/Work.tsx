@@ -99,11 +99,11 @@ export default function Work() {
                     </div>
 
                     {/* Image/Visual Side */}
-                    <div className="group w-full md:w-1/2 mt-8 md:mt-0 relative rounded-2xl md:rounded-3xl overflow-hidden min-h-75">
+                    <div className="group relative mt-8 w-full overflow-hidden rounded-2xl border md:mt-0 md:w-1/2 md:rounded-3xl" style={{ backgroundColor: 'var(--nav-bg)', borderColor: 'var(--border-color)' }}>
                         <div className={`absolute inset-0 bg-linear-to-br ${project.color} opacity-40`} />
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="relative h-[280px] w-full sm:h-[340px] md:h-full md:min-h-[420px]">
                             {imageErrors.has(project.id) ? (
-                                <div className="flex items-center justify-center h-full">
+                                <div className="flex h-full w-full items-center justify-center">
                                     <p className="text-xs sm:text-sm">Image not available</p>
                                 </div>
                             ) : (
@@ -111,7 +111,7 @@ export default function Work() {
                                     src={project.image} 
                                     alt={project.title} 
                                     fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                                     onError={() => handleImageError(project.id)}
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />
