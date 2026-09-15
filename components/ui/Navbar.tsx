@@ -49,7 +49,7 @@ export default function Navbar() {
     { name: "Work", href: "#work" },
     { name: "Rates", href: "/rate-card" },
     { name: "Contact", href: "#contact" },
-    { name: "My CV", href: "/mark's-vitae.pdf"}
+    { name: "My CV", href: "/Mark-Kamau.pdf"}
   ];
 
   return (

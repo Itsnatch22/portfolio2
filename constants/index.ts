@@ -15,26 +15,26 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "02",
-    title: "Splyt",
+    title: "SSD Expert Zone",
     category: "E-Commerce",
-    description: "A showcase of milk products.",
-    challenge: "Standard e-commerce templates lack soul and narrative.",
-    idea: "Treating products as art pieces with immersive storytelling.",
-    execution: "GSAP Scrolltrigger and cinematic transition states.",
-    link: "#",
+    description: "An Amazon affiliate website for purchasing SSDs.",
+    challenge: "The SSD market is saturated, making it hard for users to find the right product.",
+    idea: "A visually rich experience that guides users through the SSD selection process.",
+    execution: "Built with Next.js and Tailwind CSS for a fast, responsive experience.",
+    link: "https://ssdexpertzone.com",
     color: "from-purple-900/20 to-fuchsia-900/20",
-    image: '/splyt.png'
+    image: '/ssdexpertzone.png'
   },
   {
     id: "03",
-    title: "SkillsConnect",
-    category: "Experimental",
-    description: "A platform for connecting skills and opportunities.",
-    challenge: "Too many platforms exist but none connect skills to real opportunities.",
-    idea: "An open hub for opportunities.",
-    execution: "Built with Next.js and Supabase for real-time processing.",
-    link: "#",
+    title: "Inuka 034 Initiative",
+    category: "Non-governmental Organization",
+    description: "A holistic community driven platform for the residents of Kajiado County.",
+    challenge: "Limited access to information and resources for community members.",
+    idea: "A community-driven platform that connects residents with available resources and opportunities.",
+    execution: "Built with Next.js and Tailwind CSS for a fast, responsive experience. Rich content to engage the community and provide valuable information.",
+    link: "https://inukainitiative.org",
     color: "from-emerald-900/20 to-teal-900/20",
-    image: '/skills.png'
+    image: '/inuka.png'
   }
 ];

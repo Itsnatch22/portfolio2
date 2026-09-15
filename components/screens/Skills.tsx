@@ -13,7 +13,6 @@ export default function About() {
   const philosophyText = "I bridge the gap between creative design and technical execution. My approach is rooted in narrative, focusing on motion, interaction, and the subtle details that turn a website into an experience.";
 
   useGSAP(() => {
-    // Text Reveal
     gsap.to(".reveal-word", {
       scrollTrigger: {
         trigger: ".reveal-container",
@@ -91,7 +90,6 @@ export default function About() {
                  </div>
             </div>
 
-            {/* Column 2 (Offset) */}
             <div className="about-grid-item md:col-span-5 md:col-start-7 pt-0 md:pt-20 lg:pt-32 space-y-2">
                  <span className="text-xs uppercase tracking-widest block mb-3 sm:mb-4" style={{ color: 'var(--accent)' }}>
                    The Vibe

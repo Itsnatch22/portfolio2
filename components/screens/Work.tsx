@@ -50,7 +50,6 @@ export default function Work() {
   return (
     <ErrorBoundary>
       <section id="work" ref={containerRef} className="relative" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
-        {/* Section Header */}
         <div className="px-4 sm:px-6 md:px-24 py-16 sm:py-24 mb-8 sm:mb-12">
             <h2 className="text-xs sm:text-sm font-inter tracking-[0.2em] uppercase mb-4" style={{ color: 'var(--muted)' }}>
                 (002) Selected Works
@@ -60,7 +59,6 @@ export default function Work() {
             </p>
         </div>
 
-        {/* Horizontal Scroll Container */}
         <div ref={horizontalRef} className="min-h-screen md:h-screen w-full flex md:overflow-x-hidden overflow-y-auto md:overflow-y-hidden">
             {PROJECTS.map((project) => (
                 <div key={project.id} className="project-panel w-full md:w-full h-auto md:h-full shrink-0 flex flex-col md:flex-row p-4 sm:p-6 md:p-24 box-border border-r mb-8 md:mb-0" style={{ backgroundColor: 'var(--background)', borderColor: 'var(--border-color)' }}>
